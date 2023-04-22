@@ -1,0 +1,81 @@
+body {
+    color: #2D2727;
+    background-color: #F7F5EB;
+    background-image: url("static/bg_2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+
+.cheese {
+    margin: 30px;
+    border: 2px solid #CC9B6D;
+    background-color: #F4EEE0;
+    padding: 20px;
+}
+
+.cheese h4 {
+margin-top: 0;
+}
+
+.cheese ul {
+margin: 0;
+padding: 0;
+}
+
+.cheese li {
+list-style: none;
+margin-bottom: 5px;
+}
+
+
+
+h1 {
+    /* text-align: center; */
+    font-size: 48px;
+}
+
+form {
+    text-align: center;
+}
+
+button {
+    margin: 10px;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+margin-bottom: 10px;
+}
+
+a {
+font-size: 24px;
+}
+
+button {
+    background-color: #4CAF50; /* Green background color */
+    border: none; /* Remove border */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Add some padding */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make it inline */
+    font-size: 16px; /* Set font size */
+    margin: 10px 5px; /* Add margin */
+    cursor: pointer; /* Add pointer cursor on hover */
+    border-radius: 5px; /* Add rounded corners */
+    transition-duration: 0.3s; /* Add transition effect */
+  }
+  
+  /* Change background color on hover */
+  button:hover {
+    background-color: #3e8e41;
+  }
+  

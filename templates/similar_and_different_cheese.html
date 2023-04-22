@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Similar and Different Cheeses</title>
+    <link rel="stylesheet" type="text/css" href="static/styles.css">
+</head>
+<body>
+    <h1>Get Similar or Different Cheeses</h1>
+    <h4>🚩 Some cheeses for you to play around with: Rondo, Pyengana Cheddar, Triple Creme Brie...</h4>
+    <a href="/">Go back to home page</a>
+
+    <form method="post">
+        <label for="cheese_name">Enter a cheese name:</label>
+        <input type="text" id="cheese_name" name="cheese_name"><br><br>
+        <button type="submit" name="button" value="get_similar">Get Similar Cheeses</button>
+        <button type="submit" name="button" value="get_different">Get Different Cheeses</button>
+    </form>
+    {% if result %}
+    <h2>Cheeses based on your choice:</h2>
+    {% for cheese in result %}
+    <div class="cheese">
+        <h3>🧀  {{ cheese.name }}</h3>
+        <ul>
+            <li><strong>Name:</strong> {{ cheese.name }}</li>
+                <li><strong>Country of Origin:</strong> {{ cheese.country }}</li>
+                <li><strong>Region:</strong> {{ cheese.region }}</li>
+                <!-- <li><strong>Type:</strong> {{ cheese.moisture }}</li> -->
+                <li><strong>Milk:</strong> {{ ', '.join(cheese.milk) }}</li>
+                <li><strong>Texture:</strong> {{ ', '.join(cheese.texture) }}</li>
+                <li><strong>Rind:</strong> {{ cheese.rind }}</li>
+                <li><strong>Flavor:</strong> {{ ', '.join(cheese.flavor) }}</li>
+                <!-- <li><strong>Color:</strong> {{ cheese.color }}</li> -->
+                <li><strong>Aroma:</strong> {{ ', '.join(cheese.aroma) }}</li>
+                <li><strong>Description:</strong> {{ cheese.description }}</li>
+        </ul>
+    </div>
+    {% endfor %}
+    {% endif %}
+</body>
+</html>

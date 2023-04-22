@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cheese Origin by Country Map</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- load plotly.js library -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h1>Cheese Origin by Country Map</h1>
+    <a href="/">Go back to home page</a>
+
+    <div id="plot"></div>
+    <script>
+        var fig_json = '{{ fig_json|safe }}';
+        var fig_data = JSON.parse(fig_json);
+        Plotly.newPlot('plot', fig_data.data, fig_data.layout);
+    </script>
+</body>
+</html>

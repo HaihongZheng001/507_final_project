@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Unique and Common Cheeses</title>
+        <link rel="stylesheet" type="text/css" href="static/styles.css">
+    </head>
+    <body>
+        <h1>Get Most Unique or Common Cheeses</h1>
+        <a href="/">Go back to home page</a>
+        <p>🦊 Choose between the most common or most unique cheeses in our cheese database and find your next favorite cheese. We pick most common/unique cheeses by counting and sorting their connections(based on similarities in texture/aroma/flavor...). Most common cheeses have shared similarities with most other cheeses while unique ones have fewest similarities with all other cheeses.</p>
+
+        <form method="post">
+            <button type="submit" name="button" value="most_common" class="button">Most Common Cheeses</button>
+            <button type="submit" name="button" value="most_unique" class="button">Most Unique Cheeses</button>
+        </form>
+        {% if result %}
+        <h2>{{ result }} cheeses picked for you:</h2>
+        {% for cheese in cheeses %}
+        <div class="cheese">
+            <h3>🧀 {{ cheese.name }}</h3>
+            <ul>
+                <li><strong>Name:</strong> {{ cheese.name }}</li>
+                <li><strong>Country of Origin:</strong> {{ cheese.country }}</li>
+                <li><strong>Region:</strong> {{ cheese.region }}</li>
+                <!-- <li><strong>Type:</strong> {{ cheese.moisture }}</li> -->
+                <li><strong>Milk:</strong> {{ ', '.join(cheese.milk) }}</li>
+                <li><strong>Texture:</strong> {{ ', '.join(cheese.texture) }}</li>
+                <li><strong>Rind:</strong> {{ cheese.rind }}</li>
+                <li><strong>Flavor:</strong> {{ ', '.join(cheese.flavor) }}</li>
+                <!-- <li><strong>Color:</strong> {{ cheese.color }}</li> -->
+                <li><strong>Aroma:</strong> {{ ', '.join(cheese.aroma) }}</li>
+                <li><strong>Description:</strong> {{ cheese.description }}</li>
+            </ul>
+        </div>
+        {% endfor %}
+        {% endif %}
+    </body>
+</html>
