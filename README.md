@@ -81,7 +81,7 @@ The functions on http://localhost:5000/ include:
 
     Description: a dictionary of the US state names and code.
 
-###### us_state_name_dict.json
+##### us_state_name_dict.json
 
 - URLs for data and documentation: https://github.com/HaihongZheng001/507_final_project/blob/main/data/us_state_name_dict.json
 - Format(s): JSON
