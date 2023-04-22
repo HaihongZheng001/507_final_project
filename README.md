@@ -114,4 +114,5 @@ Flask, plotly, pyvis
 Users can download project code, install and import required packages, then run the flask app locally. Start from the flask home page, click the links to each function and see/interact with the cheese program.
 
 ### Demo Link
+https://umich.zoom.us/rec/share/QhbkWLsMfh90ET4KifYeNbJU_uUrUVySgHdyKRfTBrOLiRDpgmErUHOzU9_eFkJb.wLIbrLIabosaqez9?startTime=1682168265000
 
